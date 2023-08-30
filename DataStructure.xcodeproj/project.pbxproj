@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F7A0ECE2A9EFC2F00DC19BA /* Circular Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A0ECD2A9EFC2F00DC19BA /* Circular Queue.swift */; };
+		7F7A0ED02A9F005C00DC19BA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A0ECF2A9F005C00DC19BA /* .gitignore */; };
 		7FDC56A82A9DC9580017B391 /* DataStructureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC56A72A9DC9580017B391 /* DataStructureApp.swift */; };
 		7FDC56AA2A9DC9580017B391 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC56A92A9DC9580017B391 /* ContentView.swift */; };
 		7FDC56AC2A9DC95A0017B391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDC56AB2A9DC95A0017B391 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		7F7A0ECD2A9EFC2F00DC19BA /* Circular Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Circular Queue.swift"; sourceTree = "<group>"; };
+		7F7A0ECF2A9F005C00DC19BA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7FDC56A42A9DC9580017B391 /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDC56A72A9DC9580017B391 /* DataStructureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureApp.swift; sourceTree = "<group>"; };
 		7FDC56A92A9DC9580017B391 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		7FDC569B2A9DC9580017B391 = {
 			isa = PBXGroup;
 			children = (
+				7F7A0ECF2A9F005C00DC19BA /* .gitignore */,
 				7FDC56A62A9DC9580017B391 /* DataStructure */,
 				7FDC56B72A9DC95A0017B391 /* DataStructureTests */,
 				7FDC56C12A9DC95A0017B391 /* DataStructureUITests */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FDC56AF2A9DC95A0017B391 /* Preview Assets.xcassets in Resources */,
+				7F7A0ED02A9F005C00DC19BA /* .gitignore in Resources */,
 				7FDC56AC2A9DC95A0017B391 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
