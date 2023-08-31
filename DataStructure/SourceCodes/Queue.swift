@@ -16,7 +16,7 @@ public struct Queue<T> {
     }
     
     public mutating func enqueue(_ element: T) {
-        return elements.append(element)
+        elements.append(element)
     }
     
     public mutating func dequeue() -> T? {

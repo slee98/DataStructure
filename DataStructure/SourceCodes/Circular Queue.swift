@@ -11,44 +11,47 @@ public struct CircularQueue<T> {
     
     public private(set) var queueElements: [T?]
     public var capacity: Int
-    public var front: Int = 0
-    public var rear: Int = 0
+    
+    /// Index pointing to next index position to queue incoming element.
+    private var enqueueIndex: Int = 0
+    /// Index pointing to next index position to dequeue.
+    private var dequeueIndex: Int = 0
     
     
-    public init(_ capacity: Int) {
+    public init(capacity: Int) {
         self.capacity = capacity
         self.queueElements = Array(repeating: nil, count: capacity)
-    }
-    
-    public mutating func circularEnqueue(_ element: T) -> [T?] {
-        if queueElements[rear] == nil {
-            queueElements[rear] = element
-            rear = (rear + 1) % capacity
-            return  queueElements
 
-        } else {
-            // Queue is full
-            return queueElements
-        }
     }
     
-    public mutating func circularDequeue() -> [T?] {
-        if queueElements[front] != nil {
-            queueElements[front] = nil
-            front = (front + 1) % capacity
-            return queueElements
-            
-        } else {
-          
-            return queueElements
+    @discardableResult
+    public mutating func enqueue(_ element: T) -> Bool {
+        guard !isFull() else {
+            return false
         }
+        
+        queueElements[enqueueIndex] = element
+        enqueueIndex = (enqueueIndex + 1) % capacity
+        return true
+    }
+    
+    /// Return nil when the queue is empty.
+    @discardableResult
+    public mutating func dequeue() -> T? {
+        guard !isEmpty() else {
+            return nil
+        }
+        let returnValue = queueElements[dequeueIndex]
+        queueElements[dequeueIndex] = nil
+        dequeueIndex = (dequeueIndex + 1) % capacity
+        return returnValue
     }
     
     public func isFull() -> Bool {
-        return (rear + 1) % capacity == front
-       }
+        return queueElements[enqueueIndex] != nil
+    }
     
     public func isEmpty() -> Bool {
-        return front == rear
+        return queueElements[dequeueIndex] == nil
     }
 }
